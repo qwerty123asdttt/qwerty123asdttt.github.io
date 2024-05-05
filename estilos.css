@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: cambioFondo 10s infinite alternate;
+}
+
+.contenedor {
+    text-align: center;
+    padding: 2rem;
+}
+
+.titulo {
+    color: #660066;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #ffccff;
+    animation: entradaTitulo 2s ease-out;
+}
+
+.instruccion {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #333;
+    animation: aparicionInstruccion 3s ease-in-out;
+}
+
+#botonAudio {
+    background-color: #486bad;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    animation: botonEntrada 1s ease-out;
+}
+
+.mensaje {
+    background-color: #e65353;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.globo {
+    width: 50px;
+    height: 70px;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    animation: flotar 5s ease-in-out infinite;
+}
+
+#globo1 {
+    background-color: #ff6666;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+#globo3 {
+    background-color: #cc99ff;
+    left: 70%;
+    animation-delay: 4s;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+/* Animaciones */
+@keyframes cambioFondo {
+    from { background-color: #ffccff; }
+    to { background-color: #ffe6ff; }
+}
+
+@keyframes entradaTitulo {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes botonEntrada {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes aparicionInstruccion {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
